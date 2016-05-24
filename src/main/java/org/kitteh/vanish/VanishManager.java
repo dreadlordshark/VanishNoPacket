@@ -249,12 +249,14 @@ public final class VanishManager {
             this.vanishedPlayerNames.add(vanishingPlayerName);
             MetricsOverlord.getVanishTracker().increment();
             this.plugin.getLogger().info(vanishingPlayerName + " disappeared.");
+            vanishingPlayer.setCollidable(false);
         } else {
             Debuggle.log("It's visible time! " + vanishingPlayer.getName());
             this.resetSleepingIgnored(vanishingPlayer);
             this.removeVanished(vanishingPlayerName);
             MetricsOverlord.getUnvanishTracker().increment();
             this.plugin.getLogger().info(vanishingPlayerName + " reappeared.");
+            vanishingPlayer.setCollidable(true);
         }
         if (effects) {
             final Location oneUp = vanishingPlayer.getLocation().add(0, 1, 0);
