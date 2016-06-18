@@ -263,12 +263,6 @@ public final class VanishManager {
             if (VanishPerms.canEffectSmoke(vanishingPlayer)) {
                 this.effectSmoke(vanishingPlayer.getLocation());
             }
-            if (VanishPerms.canEffectExplode(vanishingPlayer)) {
-                this.effectExplosion(vanishingPlayer);
-            }
-            if (VanishPerms.canEffectLightning(vanishingPlayer)) {
-                this.effectLightning(vanishingPlayer.getLocation());
-            }
             if (VanishPerms.canEffectFlames(vanishingPlayer)) {
                 this.effectFlames(oneUp);
             }
